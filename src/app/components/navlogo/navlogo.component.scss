@@ -1,0 +1,206 @@
+nav {
+  width: 100%;
+  padding: 2.2vw 9.2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    font-size: 3.125vw;
+    background: crimson;
+    color: white;
+    font-weight: 600;
+    padding: 0.3vw;
+    //position: relative;
+  }
+
+  .right-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      cursor: pointer;
+      margin: 0 1vw;
+      border: 0.3vw solid transparent;
+      transition: 250ms;
+
+      &:hover {
+        border-bottom: 0.3vw solid crimson;
+
+      }
+    ;
+    }
+
+
+  }
+
+
+}
+
+.wrapper {
+  padding: 0 9.2vw;
+  height: 34.028vw;
+  display: flex;
+  //align-items: center;
+  justify-content: center;
+
+  .text {
+    width: 55vw;
+    height: 35vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 1.6vw;
+
+    h2 {
+      font-size: 4.5vw;
+    }
+
+    h1 {
+      font-size: 4.5vw;
+      font-weight: 500;
+      margin-bottom: 2vw;
+    }
+
+    p {
+      font-size: 2vw;
+      margin-bottom: 1.2vw;
+    }
+  }
+
+  .image {
+    width: 23vw;
+    height: 23vw;
+    background: #000000;
+    display: flex;
+    border-radius: 50%;
+    transition: 500ms;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .circle2 {
+      width: 20vw; //27
+      transition: 500ms;
+    }
+
+    .grece.circle2 {
+      width: 27vw;
+      animation: 7s spinGrece infinite linear;
+    }
+    .vector {
+      z-index: -3;
+      position: absolute;
+      top: 50%;
+      transition: 500ms;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+button {
+  background: transparent;
+  outline: none;
+  margin-top: 2vw;
+  border: none;
+  border-radius: 15vw;
+  width: 17vw;
+  height: 4vw;
+  font-weight: 600;
+  letter-spacing: .06vw;
+  color: white;
+  font-size: 1.5vw;
+  cursor: pointer;
+  transition: 300ms;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.2);
+
+    &:after {
+      transform: translateX(-17vw);
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 34vw;
+    height: 4vw;
+    transition: 500ms ease-in-out;
+    z-index: -1;
+    background-image: radial-gradient(circle farthest-corner at 32.7% 82.7%, #DC143C 8.3%, rgba(15, 51, 92, 1) 79.4%);
+  }
+
+
+}
+
+.image::after {
+  content: '';
+  position: absolute;
+  top: -1vw; //0
+  left: -1vw; //0
+  transition: 500ms;
+  right: -1vw; //0
+  bottom: -1vw; //0
+  background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+  z-index: -1;
+  animation: 4s spin infinite linear;
+  border-radius: 50%;
+}
+
+.off.image::after {
+  top: .8vw; //0
+  left: .8vw; //0
+  right: .8vw; //0
+  bottom: .8vw; //0
+  animation: none;
+}
+
+.image::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  animation: 4s spin infinite linear;
+  top: 0;
+  transition: 500ms;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+  z-index: -2;
+  filter: blur(27px); //filter: blur(27px)
+}
+
+.off.image::before {
+  filter: none;
+  top: .8vw; //0
+  left: .8vw; //0
+  right: .8vw; //0
+  bottom: .8vw; //0
+  animation: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinGrece {
+  from {
+    transform: rotate(0) translate(0, 0);
+  }
+  to {
+    transform: rotate(360deg) translate(0, 0);
+  }
+}
