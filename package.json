@@ -1,6 +1,7 @@
 {
   "name": "portfolio-rafael",
-  "version": "0.0.0",
+  "author": "Rafael Nasybullin",
+  "version": "4.2.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

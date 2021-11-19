@@ -7,13 +7,15 @@ import { NavlogoComponent } from './components/navlogo/navlogo.component';
 import { MyprojectsComponent } from './components/myprojects/myprojects.component';
 import { CardworkComponent } from './components/myprojects/cardwork/cardwork.component';
 import {RouterModule} from "@angular/router";
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavlogoComponent,
     MyprojectsComponent,
-    CardworkComponent
+    CardworkComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,RouterModule,
