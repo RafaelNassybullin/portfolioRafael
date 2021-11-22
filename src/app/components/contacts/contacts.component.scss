@@ -1,7 +1,110 @@
-.wrapper{
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  //justify-content:space-between;
+  flex-direction: column;
+  padding: 0 9.2vw;
+  height: 100vh; //////////////
+}
+
+.to-back {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+  margin-top: 3vw;
+
+  h2 {
+    font-size: 2.778vw;
+  }
+}
+
+.link-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.arrow {
+  margin-right: 2vw;
+  cursor: pointer;
+}
+
+svg:active {
+  outline: none;
+  border: none;
+}
+
+h1 {
+  cursor: pointer;
+
+  i {
+    font-size: 8em;
+  }
+}
+
+#apple,
+#facebook,
+#github,
+.f {
+  font-size: 8em;
+  background-color: #ffffff;
+  color: #fff;
+  box-shadow: 0px 0px 50px #0072ff, 0px 0px 100px #0072ff,
+  0px 0px 100px #0072ff80, 0px 0px 100px #0072ff80, inset 0px 0px 100px #0072ff80,
+  inset 0 0 100px #0072ff80, inset 0 0 100px #0072ff80,
+  inset 0 0 100px #0072ff80;
+  border-radius: 50%;
+  width: 150px;
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  padding: 0 9.2vw;
-  height: 100vh;//////////////
+  justify-content:center;
+  height: 150px;
+  padding: 11px 19px;
+  margin: 0 40px;
+  animation: animate 3s linear infinite;
+  text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+    0 0 200px #0072ff;
+}
+
+//.f {
+//  //box-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+//  //0 0 200px #0072ff;
+//  box-shadow: 0px 0px 50px #0072ff, 0px 0px 100px #0072ff,
+//  0px 0px 100px #0072ff80, 0px 0px 100px #0072ff80, inset 0px 0px 100px #0072ff80,
+//  inset 0 0 100px #0072ff80, inset 0 0 100px #0072ff80,
+//  inset 0 0 100px #0072ff80;
+//  padding: 11px 19px;
+//  border-radius: 50%;
+//  font-size: 6vw;
+//  color: #ffffff;
+//  animation: animate 3s linear infinite;
+//
+//}
+
+
+#twitter {
+  animation-delay: 0.3s;
+}
+
+#facebook {
+  animation-delay: 0.9s;
+}
+
+#github {
+  animation-delay: 1.6s;
+}
+
+@keyframes animate {
+  from {
+    filter: hue-rotate(0deg);
+
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
 }

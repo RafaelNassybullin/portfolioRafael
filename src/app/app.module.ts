@@ -8,7 +8,7 @@ import { MyprojectsComponent } from './components/myprojects/myprojects.componen
 import { CardworkComponent } from './components/myprojects/cardwork/cardwork.component';
 import {RouterModule} from "@angular/router";
 import { ContactsComponent } from './components/contacts/contacts.component';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,9 @@ import { ContactsComponent } from './components/contacts/contacts.component';
   ],
   imports: [
     BrowserModule,RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

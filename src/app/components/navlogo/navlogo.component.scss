@@ -4,6 +4,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow-x: hidden;
 
   .logo {
     font-size: 3.125vw;
@@ -11,7 +12,6 @@ nav {
     color: white;
     font-weight: 600;
     padding: 0.3vw;
-    //position: relative;
   }
 
   .right-nav {
@@ -36,26 +36,44 @@ nav {
 }
 
 
-
-.contacts{
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 500ms ease-in-out;
-cursor: pointer;
-border: 0.3vw solid transparent;
-  svg{transition: 500ms ease-in-out;
+  cursor: pointer;
+  border: 0.3vw solid transparent;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 500px;
+    transition: 500ms ease-in-out;
+    background: crimson;
+    width: 500px;
+    height: 2.778vw;
+    border-radius: 7px;
+  }
+
+  svg {
+    transition: 500ms ease-in-out;
 
   }
-  &:hover{
-transition: 500ms ease-in-out;
-    background: crimson;
-    svg{
+
+  &:hover {
+    transition: 500ms ease-in-out;
+
+    &:after {
+      left: -15px;
     }
+
   }
 }
 
-.contacts-title{
+.contacts-title {
   font-size: 2.3vw;
   margin-left: 0.9vw;
 }
@@ -64,7 +82,6 @@ transition: 500ms ease-in-out;
   padding: 0 9.2vw;
   height: 34.028vw;
   display: flex;
-  //align-items: center;
   justify-content: center;
 
   .text {
@@ -95,20 +112,21 @@ transition: 500ms ease-in-out;
   .image {
     width: 23vw;
     height: 23vw;
-background: black;
+    background: black;
     display: flex;
     border-radius: 50%;
     transition: 500ms;
     align-items: center;
     justify-content: center;
     position: relative;
-    //overflow: hidden;
-img{
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
     .circle2 {
       width: 20vw; //27
       transition: 500ms;
@@ -118,6 +136,7 @@ img{
       width: 27vw;
       animation: 7s spinGrece infinite linear;
     }
+
     .vector {
       z-index: -3;
       position: absolute;

@@ -31,6 +31,22 @@ export class CardworkComponent implements OnInit {
   t = true
   border = true
   image = [
+
+
+    {
+      img: '../../../../assets/17_MiScooter.webp',
+      linkToGhPages: 'https://v3.ru.vuejs.org/',
+      framework: 'Angular',
+      borderColour: 'crimson',
+      linkCodeGithub:'https://github.com/RafaelNassybullin'
+    },
+    {
+      img: '../../../../assets/16_Fitness.webp',
+      linkToGhPages: 'https://v3.ru.vuejs.org/',
+      framework: 'React',
+      borderColour: '#5ED3F3',
+      linkCodeGithub:'https://github.com/RafaelNassybullin'
+    },
     {
       img: '../../../../assets/2_mixlab.jpg',
       linkToGhPages: 'https://v3.ru.vuejs.org/',
@@ -53,6 +69,13 @@ export class CardworkComponent implements OnInit {
       linkCodeGithub:'https://github.com/RafaelNassybullin'
     },
     {
+      img: '../../../../assets/11_Grovemade.webp',
+      linkToGhPages: 'https://v3.ru.vuejs.org/',
+      framework: 'Vue',
+      borderColour: '#40B983',
+      linkCodeGithub:'https://github.com/RafaelNassybullin'
+    },
+    {
       img: '../../../../assets/7_YES.webp',
       linkToGhPages: 'https://v3.ru.vuejs.org/',
       framework: 'Angular',
@@ -66,13 +89,7 @@ export class CardworkComponent implements OnInit {
       borderColour: 'crimson',
       linkCodeGithub:'https://github.com/RafaelNassybullin'
     },
-    {
-      img: '../../../../assets/11_Grovemade.webp',
-      linkToGhPages: 'https://v3.ru.vuejs.org/',
-      framework: 'Vue',
-      borderColour: '#40B983',
-      linkCodeGithub:'https://github.com/RafaelNassybullin'
-    },
+
     {
       img: '../../../../assets/13_Bella.webp',
       linkToGhPages: 'https://v3.ru.vuejs.org/',
@@ -80,20 +97,8 @@ export class CardworkComponent implements OnInit {
       borderColour: 'crimson',
       linkCodeGithub:'https://github.com/RafaelNassybullin'
     },
-    {
-      img: '../../../../assets/16_Fitness.webp',
-      linkToGhPages: 'https://v3.ru.vuejs.org/',
-      framework: 'React',
-      borderColour: '#5ED3F3',
-      linkCodeGithub:'https://github.com/RafaelNassybullin'
-    },
-    {
-      img: '../../../../assets/17_MiScooter.webp',
-      linkToGhPages: 'https://v3.ru.vuejs.org/',
-      framework: 'Angular',
-      borderColour: 'crimson',
-      linkCodeGithub:'https://github.com/RafaelNassybullin'
-    },
+
+
     {
       img: '../../../../assets/20_Honey.webp',
       linkToGhPages: 'https://v3.ru.vuejs.org/',
@@ -123,7 +128,7 @@ export class CardworkComponent implements OnInit {
       linkCodeGithub:'https://github.com/RafaelNassybullin'
     },
     {
-      img: '',
+      img: '../../../../assets/VUEX-CART.jpg',
       linkToGhPages: 'https://v3.ru.vuejs.org/',
       framework: 'VuexCart',
       borderColour: '#40B983',
