@@ -49,24 +49,24 @@ export class CardworkComponent implements OnInit {
     },
     {
       img: '../../../../assets/2_mixlab.jpg',
-      linkToGhPages: 'https://v3.ru.vuejs.org/',
+      linkToGhPages: 'https://rafaelnassybullin.github.io/MixLab/',
       framework: 'HTML',
       borderColour: '#DD4B25',
-      linkCodeGithub:'https://github.com/RafaelNassybullin'
+      linkCodeGithub:'https://github.com/RafaelNassybullin/MixLab'
     },
     {
       img: '../../../../assets/3_ROOM.jpg',
-      linkToGhPages: 'https://v3.ru.vuejs.org/',
+      linkToGhPages: 'https://rafaelnassybullin.github.io/ROOM/',
       framework: 'HTML',
       borderColour: '#DD4B25',
-      linkCodeGithub: 'https://github.com/RafaelNassybullin/jadoo',
+      linkCodeGithub: 'https://github.com/RafaelNassybullin/ROOM',
     },
     {
       img: '../../../../assets/14_Jadoo.jpg',
-      linkToGhPages: 'https://v3.ru.vuejs.org/',
-      framework: 'Angular',
-      borderColour: 'crimson',
-      linkCodeGithub:'https://github.com/RafaelNassybullin'
+      linkToGhPages: 'https://rafaelnassybullin.github.io/jadoo/',
+      framework: 'React',
+      borderColour: '#5ED3F3',
+      linkCodeGithub:'https://github.com/RafaelNassybullin/jadoo'
     },
     {
       img: '../../../../assets/11_Grovemade.webp',
@@ -108,17 +108,17 @@ export class CardworkComponent implements OnInit {
     },
     {
       img: '../../../../assets/5_northstar.webp',
-      linkToGhPages: 'https://v3.ru.vuejs.org/',
+      linkToGhPages: 'https://rafaelnassybullin.github.io/Northstar/',
       framework: 'HTML',
       borderColour: '#DD4B25',
-      linkCodeGithub:'https://github.com/RafaelNassybullin'
+      linkCodeGithub:'https://github.com/RafaelNassybullin/Northstar'
     },
     {
       img: '../../../../assets/21_decbase.webp',
-      linkToGhPages: 'https://v3.ru.vuejs.org/',
+      linkToGhPages: 'https://rafaelnassybullin.github.io/furniture/',
       framework: 'HTML',
       borderColour: '#DD4B25',
-      linkCodeGithub:'https://github.com/RafaelNassybullin'
+      linkCodeGithub:'https://github.com/RafaelNassybullin/furniture'
     },
     {
       img: '../../../../assets/6_holidays.webp',
@@ -135,11 +135,11 @@ export class CardworkComponent implements OnInit {
       linkCodeGithub:'https://github.com/RafaelNassybullin'
     },
     {
-      img: '',
-      linkToGhPages: 'https://v3.ru.vuejs.org/',
+      img: '../../../../assets/melanish.webp',
+      linkToGhPages: 'https://rafaelnassybullin.github.io/melanish/',
       framework: 'Melanish',
       borderColour: '#5ED3F3',
-      linkCodeGithub:'https://github.com/RafaelNassybullin'
+      linkCodeGithub:'https://github.com/RafaelNassybullin/melanish'
     },
     {
       img: '',
