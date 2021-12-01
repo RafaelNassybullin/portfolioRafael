@@ -5,6 +5,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   overflow-x: hidden;
+  transform: translateY(-100%);
 
   .logo {
     font-size: 3.125vw;
@@ -25,16 +26,9 @@ nav {
       margin: 0 1vw;
       border: 0.3vw solid transparent;
       transition: 250ms;
-
-
     }
-
-
   }
-
-
 }
-
 
 .contacts {
   display: flex;
@@ -73,6 +67,10 @@ nav {
   }
 }
 
+.image-wrapp {
+
+}
+
 .contacts-title {
   font-size: 2.3vw;
   margin-left: 0.9vw;
@@ -82,7 +80,7 @@ nav {
   padding: 0 9.2vw;
   height: 34.028vw;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 
   .text {
     width: 55vw;
@@ -125,6 +123,12 @@ nav {
       height: 100%;
       border-radius: 50%;
       object-fit: cover;
+      opacity: 0;
+      transition: 700ms;
+    }
+
+    img._img_active {
+      opacity: 1;
     }
 
     .circle2 {
@@ -251,3 +255,11 @@ button {
     transform: rotate(360deg) translate(0, 0);
   }
 }
+
+
+.image-wrapp {
+  position: absolute;
+  top: 10vw;
+  right: 13vw;
+}
+

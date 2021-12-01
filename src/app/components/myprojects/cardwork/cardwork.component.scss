@@ -13,6 +13,7 @@
   width: 11vw;
   height: 3vw;
   transition: 300ms;
+  transition-delay:500ms ;
   &:hover {
     background: #1E0253;
   }
@@ -40,7 +41,7 @@
 
 .card {
   width: 23vw;
-  outline: 0.8vw solid #750cf2;
+  outline: 0.8vw solid #750cf2;///////////////////////
   height: 32vw;
   border-radius: 1.5vw;
   margin: 2vw 0;
@@ -48,17 +49,20 @@
   background: black;
   position: relative;
   overflow: hidden;
-  transition: 500ms;
+
+  transition: 500ms outline-color ease-in-out;
   &:hover {
-    outline: 0.8vw solid transparent;
+    //outline: 0.8vw solid transparent;//////////////////////
   }
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
-    transition: 3s ease-in-out;
+    transition: 2s ease-in-out;
+
     &:hover {
+      transition-delay: 0.5s;
       object-position: bottom;
     }
   }
@@ -75,6 +79,9 @@ a {
 }
 .card-box {
   position: relative;
+}
+.animate{
+  transform: scale(0);
 }
 .borderrr {
   width: 24.5vw;

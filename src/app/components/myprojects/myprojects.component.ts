@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import gsap from "gsap";
 
 @Component({
   selector: 'app-myprojects',
   template: `
     <div class="projects">
-      <div class="wrap">
+      <div #headmyproject class="wrap">
         <div class="title">
           <svg routerLink="/" width="3vw" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126.38 84.26"><path d="M20.45,36.56H77.37c13.83,0,27.66.07,41.49,0,4,0,7,1,7.49,5.4.37,3.69-2.44,5.78-7.56,5.78q-46.5,0-93,0H19.51c1.4,1.65,2.23,2.77,3.19,3.74q10.92,11,21.9,21.94c2.81,2.79,4.25,6,1,9.1s-6.26,1.69-9.08-1.16C25.43,70.06,14.22,58.89,3.08,47.64c-4.11-4.16-4.11-6.84,0-11C14.25,25.39,25.47,14.22,36.59,3c2.81-2.84,5.85-4.35,9-1.17s1.67,6.34-1.14,9.1Q32,23.06,19.61,35.28Z"/></svg>
           <h2 class="nav-title">Мои работы</h2></div>
@@ -32,9 +33,25 @@ export class MyprojectsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.initialAnim()
   }
 
   do(color:any) {
     console.log(color);
   }
+  @ViewChild('headmyproject', {static: true}) headmyproject!: ElementRef<HTMLDivElement>
+
+  initialAnim(): void {
+    gsap.to(this.headmyproject.nativeElement, {
+      delay: 0.3,
+      duration: 0.5,
+      y: 0
+    })
+  }
+
+
+
+
+
+
 }

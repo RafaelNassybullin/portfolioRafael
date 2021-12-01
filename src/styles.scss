@@ -10,6 +10,30 @@ body{
   font-family: Roboto, sans-serif;
   background: black;
   color: white;
+  overflow-x: hidden;
 }
 
 
+app-cardwork{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+*::-webkit-scrollbar {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 9px;
+  @media(max-width: 790px) {
+    display: none;
+  }
+}
+*::-webkit-scrollbar-thumb {
+  backdrop-filter: blur(10px);
+  background-color: #750CF2;
+  border-radius: 15px;
+@media(max-width: 790px) {
+    display: none;
+  }
+}
