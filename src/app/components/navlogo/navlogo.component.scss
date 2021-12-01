@@ -26,6 +26,9 @@ nav {
       margin: 0 1vw;
       border: 0.3vw solid transparent;
       transition: 250ms;
+
+
+
     }
   }
 }
@@ -93,12 +96,26 @@ nav {
 
     h2 {
       font-size: 4.5vw;
+      background: black;
+      overflow: hidden;
+      span{
+        display: inline-block;
+  transform: translateY(0);
+      }
     }
 
     h1 {
       font-size: 4.5vw;
       font-weight: 500;
       margin-bottom: 2vw;
+      background: black;
+      overflow: hidden;
+      position: relative;
+      span{
+display: inline-block;
+transform: translateY(0);
+
+      }
     }
 
     p {
@@ -113,7 +130,7 @@ nav {
     background: black;
     display: flex;
     border-radius: 50%;
-    transition: 500ms;
+    //transition: 500ms;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -124,7 +141,7 @@ nav {
       border-radius: 50%;
       object-fit: cover;
       opacity: 0;
-      transition: 700ms;
+      transition: 700ms opacity ease-in-out;
     }
 
     img._img_active {
@@ -133,19 +150,22 @@ nav {
 
     .circle2 {
       width: 20vw; //27
-      transition: 500ms;
+      transition: 500ms ease-in-out;
+      transition-property:width;
     }
 
     .grece.circle2 {
       width: 27vw;
       animation: 7s spinGrece infinite linear;
+      transition: 500ms ease-in-out;
+      transition-property: width ;
     }
 
     .vector {
       z-index: -3;
       position: absolute;
       top: 50%;
-      transition: 500ms;
+      transition: 500ms ease-in-out;
       left: 50%;
       transform: translate(-50%, -50%);
     }
@@ -166,11 +186,12 @@ button {
   font-size: 1.5vw;
   cursor: pointer;
   transition: 300ms;
+  //transition-property: scale;
   overflow: hidden;
   position: relative;
-
+  //transform: scale(0);
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) ;
 
     &:after {
       transform: translateX(-17vw);
@@ -191,7 +212,9 @@ button {
 
 
 }
-
+.animate-button{
+  transform: translateX(-30vw);
+}
 .image::after {
   content: '';
   position: absolute;

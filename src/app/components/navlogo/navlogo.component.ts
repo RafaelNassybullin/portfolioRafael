@@ -1,9 +1,8 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AfterContentChecked, AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import gsap from "gsap";
 import {TextPlugin} from "gsap/TextPlugin";
 
 gsap.registerPlugin(TextPlugin)
-
 
 @Component({
   selector: 'app-navlogo',
@@ -25,15 +24,19 @@ gsap.registerPlugin(TextPlugin)
     </nav>
     <div class="wrapper">
       <div class="text">
-        <h2 #he> Привет, </h2>
-        <h1 #he2>я Рафаэль Насыбуллин </h1>
-        <p>Frontend Разработчик.</p>
-        <p> 24 года, г.Актобе, Фрилансер </p>
-        <p>
-          Angular, Vue и React - любимые фреймворки,
-        </p>
-        <p>фанат веб-разработки на JavaScript!!!</p>
-        <button routerLink="/myprojects">Мои работы</button>
+        <h2 >
+          <div class="overlay" #helloTitle>Привет,</div>
+        </h2>
+        <h1 >
+          <div class="overlay" #nameTitle>я Рафаэль Насыбуллин </div>
+        </h1>
+        <p #typingAnimationsOne>Frontend Разработчик.</p>
+        <p #typingAnimationsTwo>24 года, г.Актобе, Фрилансер</p>
+        <p #typingAnimationsThree>Angular, Vue и React - любимые фреймворки,</p>
+        <p #typingAnimationsFour>фанат веб-разработки на JavaScript!!!</p>
+        <div class="animate-button" #buttonAnimation>
+        <button  routerLink="/myprojects">Мои работы</button>
+        </div>
       </div>
       <div class="image-wrapp">
         <div (mouseover)="hover = !hover"
@@ -42,7 +45,7 @@ gsap.registerPlugin(TextPlugin)
           <img [ngClass]="showImgOnInit?'_img_active':''" src="../../../assets/0d76d85861c81f297adccd6509e933c1.jpg"
                alt="">
           <div class="vector">
-            <svg [ngClass]="hover?'grece circle2':'circle2'" fill="#FFCE45" xmlns="http://www.w3.org/2000/svg"
+            <svg  [ngClass]="hover?'grece circle2':'circle2'" fill="#FFCE45" xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 578.29 578.29">
               <path
                 d="M280.33,570.06V542.38L263.47,541c-.43,3.29-.8,6-1.22,9.2l8.91,1.25c-.2,2.57-.39,5.13-.63,8.21l-17.65-1.61c1.17-8.89,2.29-17.38,3.45-26.11l32.51,2.15v44.13a287.1,287.1,0,0,1-104.41-19.48c5.44-14,10.76-27.66,16-41.17l31,9.75c-2,8.22-3.93,16.54-6.06,25.5l-17.15-4.62c.83-2.81,1.56-5.27,2.41-8.12l8.54,2.15c.86-3,1.66-5.76,2.55-8.85L205.08,528c-3,8.55-6,16.93-9.33,26.26l37,10.37c2.54-12.19,5-23.78,7.45-35.7l7.42,1.35c-1.84,11.79-3.65,23.39-5.61,36Z"/>
@@ -84,44 +87,68 @@ gsap.registerPlugin(TextPlugin)
   `,
   styleUrls: ['./navlogo.component.scss']
 })
-export class NavlogoComponent implements OnInit {
+export class NavlogoComponent implements AfterViewInit {
+  constructor() {}
+
   public hover: boolean = false
   public turnCircleOnInit: boolean = true
   public tu: boolean = true
   public logo: string = '<Rafael.>'
   public contacts: string = '<Контакты.>'
   public showImgOnInit: boolean = false
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-    this.initialAnim()
-    setTimeout(() => this.turnCircleOnInit = false, 1200)
-    setTimeout(() => this.showImgOnInit = true, 1800)
-  }
-
   @ViewChild('navanim', {static: true}) navanim!: ElementRef<HTMLDivElement>
-  @ViewChild('he', {static: true}) he!: ElementRef<HTMLDivElement>
-  @ViewChild('he2', {static: true}) he2!: ElementRef<HTMLDivElement>
+  @ViewChild('helloTitle', {static: true}) helloTitle!: ElementRef<HTMLDivElement>
+  @ViewChild('nameTitle', {static: true}) nameTitle!: ElementRef<HTMLDivElement>
   @ViewChild('image', {static: true}) image!: ElementRef<HTMLDivElement>
+  @ViewChild('typingAnimationsOne', {static: true}) typingAnimationsOne!: ElementRef<HTMLDivElement>
+  @ViewChild('typingAnimationsTwo', {static: true}) typingAnimationsTwo!: ElementRef<HTMLDivElement>
+  @ViewChild('typingAnimationsThree', {static: true}) typingAnimationsThree!: ElementRef<HTMLDivElement>
+  @ViewChild('typingAnimationsFour', {static: true}) typingAnimationsFour!: ElementRef<HTMLDivElement>
+  @ViewChild('buttonAnimation', {static: true}) buttonAnimation!: ElementRef<HTMLDivElement>
+
+  ngAfterViewInit() {
+    gsap.from(this.helloTitle.nativeElement, 1.2, {
+        y:'10.981vw',
+        delay: 0.7,
+        ease: 'power4.out',
+        skewY: 7,
+        stagger: {
+            amount: 0.3
+        }
+    })
+    gsap.from(this.nameTitle.nativeElement, 1.2, {
+        y:'10.981vw',
+        delay: 0.9,
+        ease: 'power4.out',
+        skewY: 7,
+        stagger: {
+            amount: 0.3
+        }
+    })
+    setTimeout(() => this.turnCircleOnInit = false, 1800)
+    setTimeout(() => this.showImgOnInit = true, 2400)
+    this.initialAnim()
+  }
 
   initialAnim(): void {
-
     gsap.to(this.navanim.nativeElement, {
-      delay: 1,
+      delay: 3,
       duration: 0.5,
       y: 0
     })
-    gsap.from(this.he.nativeElement, {
-      duration: 1,
-      text: "", ease: "none"
-    });
-    gsap.from(this.he2.nativeElement, {
-      delay: 1,
-      duration: 2, text: "", ease: "none"
-    });
-  }
-
-
-}
+    let tl = gsap.timeline({onComplete(){tl.kill()}})
+      tl.from(this.typingAnimationsOne.nativeElement, {
+      delay: 3,
+      duration: 0.5, text: "", ease: "none"
+    }).from(this.typingAnimationsTwo.nativeElement, {
+      duration: 0.5, text: "", ease: "none"})
+    .from(this.typingAnimationsThree.nativeElement, {
+      duration: 0.5, text: "", ease: "none"})
+    .from(this.typingAnimationsFour.nativeElement, {
+      duration: 0.5, text: "", ease: "none"})
+    .to(this.buttonAnimation.nativeElement, {
+      x:'0',
+      transition:0.3,
+      ease:'none'
+    })
+}}
