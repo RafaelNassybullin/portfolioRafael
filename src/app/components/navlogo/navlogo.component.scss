@@ -5,7 +5,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   overflow-x: hidden;
-  transform: translateY(-100%);
+  //transform: translateY(0);
 
   .logo {
     font-size: 3.125vw;
@@ -185,7 +185,7 @@ button {
   color: white;
   font-size: 1.5vw;
   cursor: pointer;
-  transition: 300ms;
+  //transition: 300ms;
   //transition-property: scale;
   overflow: hidden;
   position: relative;
@@ -205,7 +205,7 @@ button {
     top: 0;
     width: 34vw;
     height: 4vw;
-    transition: 500ms ease-in-out;
+    //transition: 500ms ease-in-out;
     z-index: -1;
     background-image: radial-gradient(circle farthest-corner at 32.7% 82.7%, #DC143C 8.3%, rgba(15, 51, 92, 1) 79.4%);
   }
@@ -213,7 +213,9 @@ button {
 
 }
 .animate-button{
-  transform: translateX(-30vw);
+
+  width: fit-content;
+  height: fit-content;
 }
 .image::after {
   content: '';
