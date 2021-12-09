@@ -13,7 +13,7 @@
   width: 11vw;
   height: 3vw;
   transition: 300ms;
-  transition-delay:500ms ;
+  //transition-delay:500ms ;
   &:hover {
     background: #1E0253;
   }
@@ -62,7 +62,7 @@
     transition: 2s ease-in-out;
 
     &:hover {
-      transition-delay: 0.5s;
+      transition-delay: 0.2s;
       object-position: bottom;
     }
   }
@@ -81,7 +81,7 @@ a {
   position: relative;
 }
 .animate{
-  transform: scale(0);
+  transform: scale(1);
 }
 .borderrr {
   width: 24.5vw;

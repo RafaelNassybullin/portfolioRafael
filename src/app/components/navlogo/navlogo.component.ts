@@ -92,7 +92,7 @@ export class NavlogoComponent implements AfterViewInit {
   constructor(public offAnimService:ToggleBooleanService) {}
   public hover: boolean = false
   public tu: boolean = true
-  public logo: string = '<Rafael.>'
+  public logo: string = '<Portfolio.>'
   public contacts: string = '<Контакты.>'
 
   @ViewChild('navanim', {static: true}) navanim!: ElementRef<HTMLDivElement>
@@ -104,6 +104,7 @@ export class NavlogoComponent implements AfterViewInit {
   @ViewChild('typingAnimationsThree', {static: true}) typingAnimationsThree!: ElementRef<HTMLDivElement>
   @ViewChild('typingAnimationsFour', {static: true}) typingAnimationsFour!: ElementRef<HTMLDivElement>
   @ViewChild('buttonAnimation', {static: true}) buttonAnimation!: ElementRef<HTMLDivElement>
+
   initImage(){
     this.offAnimService.notReadyHover = true
     this.offAnimService.showImgOnInit = true
@@ -114,10 +115,12 @@ export class NavlogoComponent implements AfterViewInit {
     this.offAnimService.serviceBool
       ? setTimeout(() => this.offAnimService.turnCircleOnInit = false, 1800)
       : this.offAnimService.turnCircleOnInit = false;
-    this.offAnimService.serviceBool?setTimeout(() => {
+    this.offAnimService.serviceBool
+      ?setTimeout(() => {
       this.offAnimService.showImgOnInit = true
       this.offAnimService.notReadyHover = true
-    }, 2400):this.initImage()
+    }, 2400)
+      :this.initImage()
   }
   initialAnim(): void {
     let tl = gsap.timeline({onComplete(){tl.kill()}})

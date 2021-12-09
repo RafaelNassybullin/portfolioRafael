@@ -10,6 +10,14 @@ export class ToggleBooleanService {
   public turnCircleOnInit: boolean = true
   public serviceBool: boolean = true
 
+
+  public projectBool:boolean = true
+
+  projectBoolAnimationTurnOff(){
+    this.projectBool = false
+  }
+
+
   toggle() {
     this.serviceBool = !this.serviceBool
     console.log(this.serviceBool);
