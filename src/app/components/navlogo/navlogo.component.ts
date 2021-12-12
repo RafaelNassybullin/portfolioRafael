@@ -25,12 +25,12 @@ gsap.registerPlugin(TextPlugin)
         <h1 >
           <div class="overlay" #nameTitle>я Рафаэль Насыбуллин </div>
         </h1>
-        <p #typingAnimationsOne>Frontend Разработчик.</p>
-        <p #typingAnimationsTwo>24 года, г.Актобе, Фрилансер</p>
-        <p #typingAnimationsThree>Angular, Vue и React - любимые фреймворки,</p>
-        <p #typingAnimationsFour>фанат веб-разработки на JavaScript!!!</p>
+        <p #typingAnimationsOne><span>✔</span> Frontend Разработчик.</p>
+        <p #typingAnimationsTwo>️<span>✔</span> 24 года, г.Актобе, Фрилансер</p>
+        <p #typingAnimationsThree>️<span>✔</span> Angular, Vue и React - любимые фреймворки,</p>
+        <p #typingAnimationsFour>️<span>✔</span> фанат веб-разработки на JavaScript!!!</p>
         <div class="animate-button" #buttonAnimation>
-        <button  routerLink="/myprojects">Мои работы</button>
+        <button class="my-jobs" routerLink="/myprojects">Мои работы</button>
         </div>
       </div>
       <div class="image-wrapp">

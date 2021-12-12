@@ -193,6 +193,9 @@ top: 83vw;
     p {
       font-size: 2vw;
       margin-bottom: 1.2vw;
+      span{
+        color: #23CF34;
+      }
       @media(max-width: 433px) {
         font-size: 7vw;
         margin-bottom: 3.2vw;
@@ -221,7 +224,7 @@ top: 83vw;
       border-radius: 50%;
       object-fit: cover;
       opacity: 0;
-      transition: 700ms opacity ease-in-out;
+      //transition: 700ms opacity ease-in-out;
       @media(max-width: 433px) {
 
       }
@@ -229,6 +232,7 @@ top: 83vw;
 
     img._img_active {
       opacity: 1;
+      transition: 700ms opacity ease-in-out;
       @media(max-width: 433px) {
 
       }
@@ -236,8 +240,7 @@ top: 83vw;
 
     .circle2 {
       width: 20vw; //27
-      transition: 500ms ease-in-out;
-      transition-property: width;
+      transition: 500ms width ease-in-out;
       @media(max-width: 433px) {
 
       }
@@ -246,8 +249,7 @@ top: 83vw;
     .grece.circle2 {
       width: 27vw;
       animation: 7s spinGrece infinite linear;
-      transition: 500ms ease-in-out;
-      transition-property: width;
+      transition: 500ms width ease-in-out;
       @media(max-width: 433px) {
         width: 84vw;
       }
@@ -257,7 +259,6 @@ top: 83vw;
       z-index: -3;
       position: absolute;
       top: 50%;
-      transition: 500ms ease-in-out;
       left: 50%;
       transform: translate(-50%, -50%);
       @media(max-width: 433px) {
@@ -280,7 +281,7 @@ button {
   color: white;
   font-size: 1.5vw;
   cursor: pointer;
-  //transition: 300ms;
+  transition: 300ms;
   //transition-property: scale;
   overflow: hidden;
   position: relative;
@@ -294,7 +295,7 @@ button {
   }
 
   &:hover {
-    transform: scale(1.2);
+    transform:translate(0px, 0px) scale(1.2) ;
     @media(max-width: 433px) {
 
     }
@@ -317,7 +318,6 @@ width: 69vw;
     top: 0;
     width: 34vw;
     height: 4vw;
-    //transition: 500ms ease-in-out;
     z-index: -1;
     background-image: radial-gradient(circle farthest-corner at 32.7% 82.7%, #DC143C 8.3%, rgba(15, 51, 92, 1) 79.4%);
     @media(max-width: 433px) {
@@ -432,4 +432,7 @@ height: fit-content;
     z-index: 7;
   }
 }
+.my-jobs{
+  transition: 500ms ease-in-out;
 
+}

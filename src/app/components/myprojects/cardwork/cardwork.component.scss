@@ -44,6 +44,7 @@
   @media(max-width: 433px) {
     width: 44vw;
     right: 0;
+    display: none;
   }
 }
 
@@ -69,17 +70,21 @@
   overflow: hidden;
   transition: 500ms outline-color ease-in-out;
   @media(max-width: 433px) {
-    width: 86vw;
-    outline: 2.8vw solid #750cf2;
-    height: 121vw;
-    border-radius: 6.5vw;
-    margin: 6vw 0;
+
+    width: 97vw;
+    outline: unset;
+    height: 59vw;
+    border-radius: 0 0 3vw 3vw;
+    margin: 0;
+    transition: unset;
+
+
   }
 
   &:hover {
     outline: 0.8vw solid transparent;
     @media(max-width: 433px) {
-
+      outline: unset;
     }
   }
 
@@ -126,8 +131,43 @@ a {
 
 .card-box {
   position: relative;
-  @media(max-width: 433px) {
 
+  .fake-menu-header {
+    background: #DDDDDD;
+    width: 97vw;
+    height: 9vw;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 3vw;
+    border-radius: 3vw 3vw 0 0;
+    margin-top: 12vw;
+
+    @media(max-width: 433px) {
+      display: flex;
+    }
+
+    .circle {
+      width: 5vw;
+      height: 5vw;
+      margin-right: 3vw;
+      background: #FCBC2D;
+      border-radius: 50%;
+    }
+
+    .circle:first-child {
+      background: #FD5E57;
+    }
+
+    .circle:nth-child(3) {
+      background: #23CF34;
+      margin-right: 15vw;
+    }
+
+    h6 {
+      color: black;
+      font-size: 7vw;
+    }
   }
 }
 
@@ -152,5 +192,6 @@ a {
     width: 91.5vw;
     height: 125.5vw;
     border-radius: 9.27vw;
+    display: none;
   }
 }
