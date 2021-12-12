@@ -8,7 +8,7 @@ import {ToggleBooleanService} from "../../../toggle-boolean.service";
   template: `
     <div class="card-wrap">
       <div class="card-box" *ngFor="let i of image">
-        <div  class="card" [ngStyle]="{outline: i.outlineStatus}">
+        <div  class="card" >
           <a [href]="i.linkToGhPages" target="_blank">
             <img [src]="i.img" alt="">
             <div class="github" [ngStyle]="{background: i.borderColour}">
@@ -34,6 +34,14 @@ export class CardworkComponent implements AfterViewChecked,OnInit {
   t = true
   border = true
   image = [
+    {
+      img: '../../../../assets/17_MiScooter.webp',
+      linkToGhPages: 'https://v3.ru.vuejs.org/',
+      framework: 'Angular',
+      borderColour: 'crimson',
+      linkCodeGithub:'https://github.com/RafaelNassybullin',
+      // outlineStatus:'0.8vw solid red'////////////////
+    },
     {
       img: '../../../../assets/21_decbase.webp',
       linkToGhPages: 'https://rafaelnassybullin.github.io/furniture/',
@@ -65,14 +73,14 @@ export class CardworkComponent implements AfterViewChecked,OnInit {
     {
       img: '../../../../assets/VUEX-CART.jpg',
       linkToGhPages: 'https://rafaelnassybullin.github.io/VuexCart/',
-      framework: 'VuexCart',
+      framework: 'Vue',
       borderColour: '#40B983',
       linkCodeGithub:'https://github.com/RafaelNassybullin/VuexCart'
     },
     {
       img: '../../../../assets/melanish.webp',
       linkToGhPages: 'https://rafaelnassybullin.github.io/melanish/',
-      framework: 'Aesthetic',
+      framework: 'React',
       borderColour: '#5ED3F3',
       linkCodeGithub:'https://github.com/RafaelNassybullin/melanish'
     },
@@ -97,35 +105,22 @@ export class CardworkComponent implements AfterViewChecked,OnInit {
       borderColour: '#DD4B25',
       linkCodeGithub:'https://github.com/RafaelNassybullin/Northstar'
     },
-    {
-      img: '../../../../assets/port.jpg',
-      linkToGhPages: 'https://rafaelnassybullin.github.io/PORT/',
-      framework: 'Port',
-      borderColour: '#DD4B25',
-      linkCodeGithub:'https://github.com/RafaelNassybullin/PORT'
-    },
+
     {
       img: '../../../../assets/gsapAnim.jpg',
       linkToGhPages: 'https://rafaelnassybullin.github.io/expoforum/',
-      framework: 'GsapRafael',
+      framework: 'React',
       borderColour: '#5ED3F3',
       linkCodeGithub:'https://github.com/RafaelNassybullin/expoforum'
     },
     {
       img: '../../../../assets/calculatorr.png',
       linkToGhPages: 'https://rafaelnassybullin.github.io/vwpxconverter/',
-      framework: 'NgRxTodo',
-      borderColour: 'crimson',
+      framework: 'HTML',
+      borderColour: '#DD4B25',
       linkCodeGithub:'https://github.com/RafaelNassybullin'
     },
-    {
-      img: '../../../../assets/17_MiScooter.webp',
-      linkToGhPages: 'https://v3.ru.vuejs.org/',
-      framework: 'Angular',
-      borderColour: 'crimson',
-      linkCodeGithub:'https://github.com/RafaelNassybullin',
-      outlineStatus:'0.8vw solid red'////////////////
-    },
+
     {
       img: '../../../../assets/16_Fitness.webp',
       linkToGhPages: 'https://rafaelnassybullin.github.io/FitnessClubGHPages/',
@@ -162,6 +157,13 @@ export class CardworkComponent implements AfterViewChecked,OnInit {
       linkCodeGithub:'https://github.com/RafaelNassybullin/honey'
     },
     {
+      img: '../../../../assets/port.jpg',
+      linkToGhPages: 'https://rafaelnassybullin.github.io/PORT/',
+      framework: 'HTML',
+      borderColour: '#DD4B25',
+      linkCodeGithub:'https://github.com/RafaelNassybullin/PORT'
+    },
+    {
       img: '../../../../assets/blog.jpg',
       linkToGhPages: 'https://rafaelnassybullin.github.io/foodblogger/',
       framework: 'HTML',
@@ -169,11 +171,11 @@ export class CardworkComponent implements AfterViewChecked,OnInit {
       linkCodeGithub:'https://rafaelnassybullin.github.io/foodblogger/'
     },
     {
-      img: '',
-      linkToGhPages: 'https://rafaelnassybullin.github.io/foodblogger/',
-      framework: 'HTML',
-      borderColour: '#DD4B25',
-      linkCodeGithub:'https://rafaelnassybullin.github.io/foodblogger/'
+      img: '../../../../assets/cv.png',
+      linkToGhPages: 'https://rafaelnassybullin.github.io/cv_rafael_react/',
+      framework: 'React',
+      borderColour: '#5ED3F3',
+      linkCodeGithub:'https://github.com/RafaelNassybullin/cv_rafael_react'
     },
     {
       img: '../../../../assets/furniture.jpg',

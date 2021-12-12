@@ -1,5 +1,8 @@
 .projects {
   padding: 0 9.2vw;
+  @media(max-width: 433px) {
+    padding: 0 4vw;
+  }
 }
 
 .card-wrap {
@@ -7,6 +10,9 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  @media(max-width: 433px) {
+
+  }
 }
 
 .wrap {
@@ -15,10 +21,16 @@
   justify-content: space-between;
   margin-top: 3vw;
   //transform: translateY(-150%);
+  @media(max-width: 433px) {
+    margin-top: 5vw;
+  }
 
   h2 {
     font-size: 2.778vw;
     //color: #dcb527;
+    @media(max-width: 433px) {
+      font-size: 9.778vw;
+    }
   }
 
   button {
@@ -41,12 +53,36 @@
     transition: 300ms;
     overflow: hidden;
     position: relative;
+    @media(max-width: 433px) {
+      justify-content: center;
+      width: 12vw;
+      height: 12vw;
+      background: #750CF2;
+      //margin-right: 3vw;
+      display: flex;
+padding: 0;
+      align-items: center;
+      //justify-content:center;
+    }
+
+    svg {
+      @media(max-width: 433px){
+          width: 8vw;
+      }
+
+    }
 
     &:hover {
       transform: scale(1.2);
+      @media(max-width: 433px) {
+
+      }
 
       &:after {
         transform: translateX(-17vw);
+        @media(max-width: 433px) {
+
+        }
       }
     }
 
@@ -60,6 +96,9 @@
       transition: 500ms ease-in-out;
       z-index: -1;
       background-image: linear-gradient(126.3deg, rgba(30, 2, 83, 1) 32.2%, rgba(198, 55, 160, 0.46) 109.2%);
+      @media(max-width: 433px) {
+        display: none;
+      }
     }
 
 
@@ -68,29 +107,47 @@
 
 p {
   margin-left: 1vw;
+  @media(max-width: 433px) {
+    display: none;
+  }
 }
 
 a {
   text-decoration: none;
+  @media(max-width: 433px) {
+
+  }
 }
 
 .title {
   display: flex;
   align-items: center;
   justify-content: center;
+  @media(max-width: 433px) {
+
+  }
 
   svg {
     margin-right: 2vw;
     cursor: pointer;
     transition: 300ms;
+    @media(max-width: 433px) {
+      width: 8vw;margin-right: 8vw;
+    }
 
     &:hover {
       transform: scale(1.2);
+      @media(max-width: 433px) {
+
+      }
     }
   }
 
   svg:active {
     outline: none;
     border: none;
+    @media(max-width: 433px) {
+
+    }
   }
 }

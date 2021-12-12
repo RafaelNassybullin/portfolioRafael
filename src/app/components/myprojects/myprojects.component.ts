@@ -1,5 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import gsap from "gsap";
+import {Component,  OnInit} from '@angular/core';
 import {ToggleBooleanService} from "../../toggle-boolean.service";
 
 @Component({
