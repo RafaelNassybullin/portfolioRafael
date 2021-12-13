@@ -8,7 +8,7 @@ import {ToggleBooleanService} from "../../toggle-boolean.service";
       <div #headmyproject class="wrap">
         <div class="title">
           <svg routerLink="/" width="3vw" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126.38 84.26"><path d="M20.45,36.56H77.37c13.83,0,27.66.07,41.49,0,4,0,7,1,7.49,5.4.37,3.69-2.44,5.78-7.56,5.78q-46.5,0-93,0H19.51c1.4,1.65,2.23,2.77,3.19,3.74q10.92,11,21.9,21.94c2.81,2.79,4.25,6,1,9.1s-6.26,1.69-9.08-1.16C25.43,70.06,14.22,58.89,3.08,47.64c-4.11-4.16-4.11-6.84,0-11C14.25,25.39,25.47,14.22,36.59,3c2.81-2.84,5.85-4.35,9-1.17s1.67,6.34-1.14,9.1Q32,23.06,19.61,35.28Z"/></svg>
-          <h2 class="nav-title">Мои работы</h2></div>
+          <h2 class="nav-title">{{aServ.language?aServ.myWorksRus:aServ.myWorksEng}}</h2></div>
         <a href="https://github.com/RafaelNassybullin?tab=repositories" target="_blank">
           <button>
             <svg width="2vw" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 342.36 333.67">
@@ -18,7 +18,7 @@ import {ToggleBooleanService} from "../../toggle-boolean.service";
               <path d="M84.05,266.25a35,35,0,0,1,3.7,4.64c.18.32-1.17,1.49-1.82,2.27a28.58,28.58,0,0,1-3.76-3.52C81.94,269.35,83.06,268,84.05,266.25Z"/>
               <path d="M122,281.92c-.42-1.24-1.5-2.76-1.12-3.66a5.57,5.57,0,0,1,3.35-2.69c.74-.2,1.92,1.17,2.9,1.83l-3,3.32Z"/>
             </svg>
-            <p >Github</p>
+            <p>Github</p>
           </button >
         </a>
       </div>
@@ -30,6 +30,7 @@ import {ToggleBooleanService} from "../../toggle-boolean.service";
 export class MyprojectsComponent implements OnInit {
 
   constructor(public aServ:ToggleBooleanService) {
+    this.aServ.serviceBool?this.aServ.userLanguage():''
   }
 
   ngOnInit(): void {

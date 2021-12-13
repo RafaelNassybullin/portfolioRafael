@@ -2,7 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
-  HostListener,
+  HostListener, OnInit,
   ViewChild
 } from '@angular/core';
 import gsap from "gsap";
@@ -15,22 +15,30 @@ gsap.registerPlugin(TextPlugin)
   selector: 'app-navlogo',
   template: `
     <nav #navanim>
-      <div class="logo">{{logo}}</div>
+      <div  class="logo">{{offAnimService.language?logoRus:logoEng}}</div>
+      <h3 (click)="offAnimService.languageToggle()">{{offAnimService.language?'RU':'EN'}}</h3>
     </nav>
     <div class="wrapper">
       <div class="text">
-        <h2 >
-          <div class="overlay" #helloTitle>Привет,</div>
+        <h2>
+          <div class="overlay" #helloTitle>{{offAnimService.language?offAnimService.helloRus:offAnimService.helloEngg}}</div>
         </h2>
-        <h1 >
-          <div class="overlay" #nameTitle>я Рафаэль Насыбуллин </div>
+        <h1>
+          <div class="overlay" #nameTitle>{{offAnimService.language?offAnimService.nameRus:offAnimService.nameEngg}}</div>
         </h1>
-        <p #typingAnimationsOne><span>✔</span> Frontend Разработчик.</p>
-        <p #typingAnimationsTwo>️<span>✔</span> 24 года, г.Актобе, Фрилансер</p>
-        <p #typingAnimationsThree>️<span>✔</span> Angular, Vue и React - любимые фреймворки,</p>
-        <p #typingAnimationsFour>️<span>✔</span> фанат веб-разработки на JavaScript!!!</p>
+        <p *ngIf="offAnimService.language" #typingAnimationsOne><span>✔</span> Фронтенд разработчик</p>
+        <p *ngIf="!offAnimService.language" #typingAnimationsOne><span>✔</span> Frontend Developer</p>
+
+        <p *ngIf="offAnimService.language" #typingAnimationsTwo><span>✔</span> 24 года, г.Актобе, Фрилансер</p>
+        <p *ngIf="!offAnimService.language" #typingAnimationsTwo><span>✔</span> 24 y.o., Aqtobe city, Freelancer</p>
+
+        <p *ngIf="offAnimService.language" #typingAnimationsThree><span>✔</span> Angular, Vue и React - любимые фреймворки,</p>
+        <p *ngIf="!offAnimService.language" #typingAnimationsThree><span>✔</span> Angular, Vue and React - favorite frameworks,</p>
+
+        <p *ngIf="offAnimService.language" #typingAnimationsFour><span>✔</span> фанат веб-разработки на JavaScript!!!</p>
+        <p *ngIf="!offAnimService.language" #typingAnimationsFour><span>✔</span> The fan of JavaScript web development !!!</p>
         <div class="animate-button" #buttonAnimation>
-        <button class="my-jobs" routerLink="/myprojects">Мои работы</button>
+        <button  class="my-jobs" routerLink="/myprojects">{{offAnimService.language?offAnimService.myWorksRus:offAnimService.myWorksEng}}</button>
         </div>
       </div>
       <div class="image-wrapp">
@@ -82,25 +90,35 @@ gsap.registerPlugin(TextPlugin)
   `,
   styleUrls: ['./navlogo.component.scss']
 })
-export class NavlogoComponent implements AfterViewInit {
-  constructor(public offAnimService:ToggleBooleanService) {}
+export class NavlogoComponent implements AfterViewInit, OnInit {
+  constructor(public offAnimService:ToggleBooleanService) {
+   this.offAnimService.serviceBool?this.offAnimService.userLanguage():''
+  }
   public hover: boolean = false
-  public logo: string = '<Portfolio.>'
-  public contacts: string = '<Контакты.>'
-
+  public logoEng: string = '<Portfolio.>'
+  public logoRus: string = '<Портфолио.>'
+  public testText:string = 'Фронтенд разработчик.'
   public innerWidthh = window.innerWidth
+  public engText:string = 'Frontend Developer'
+  public thats:boolean = true
+
+  ngOnInit() {
+
+  }
+
   @HostListener('window:resize', ['$event'])
   onResize(event:any) {
     this.innerWidthh = window.innerWidth;
   }
+
   @ViewChild('navanim', {static: true}) navanim!: ElementRef<HTMLDivElement>
   @ViewChild('helloTitle', {static: true}) helloTitle!: ElementRef<HTMLDivElement>
   @ViewChild('nameTitle', {static: true}) nameTitle!: ElementRef<HTMLDivElement>
   @ViewChild('image', {static: true}) image!: ElementRef<HTMLDivElement>
-  @ViewChild('typingAnimationsOne', {static: true}) typingAnimationsOne!: ElementRef<HTMLDivElement>
-  @ViewChild('typingAnimationsTwo', {static: true}) typingAnimationsTwo!: ElementRef<HTMLDivElement>
-  @ViewChild('typingAnimationsThree', {static: true}) typingAnimationsThree!: ElementRef<HTMLDivElement>
-  @ViewChild('typingAnimationsFour', {static: true}) typingAnimationsFour!: ElementRef<HTMLDivElement>
+  @ViewChild('typingAnimationsOne', {static: false}) typingAnimationsOne!: ElementRef<HTMLDivElement>
+  @ViewChild('typingAnimationsTwo', {static: false}) typingAnimationsTwo!: ElementRef<HTMLDivElement>
+  @ViewChild('typingAnimationsThree', {static: false}) typingAnimationsThree!: ElementRef<HTMLDivElement>
+  @ViewChild('typingAnimationsFour', {static: false}) typingAnimationsFour!: ElementRef<HTMLDivElement>
   @ViewChild('buttonAnimation', {static: true}) buttonAnimation!: ElementRef<HTMLDivElement>
 
   initImage(){
@@ -153,4 +171,6 @@ export class NavlogoComponent implements AfterViewInit {
       ease: 'power4.out',
       stagger: {amount: 0.3}
     }).call(()=>this.offAnimService.f())
-  }}
+  }
+
+}
