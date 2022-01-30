@@ -45,7 +45,7 @@ gsap.registerPlugin(TextPlugin)
         <div (mouseover)="hover = !hover"
              (mouseleave)="hover = !hover"
              [ngClass]="this.offAnimService.turnCircleOnInit||hover?'off image':'image'">
-          <img [ngClass]="offAnimService.showImgOnInit?'_img_active':''" src="assets/S00102-012830.png"
+          <img [ngClass]="offAnimService.showImgOnInit?'_img_active':''" src="assets/me.webp"
                alt="">
           <div class="vector">
             <svg  [ngClass]="hover&&offAnimService.notReadyHover?'grece circle2':'circle2'" fill="#FFCE45" xmlns="http://www.w3.org/2000/svg"
